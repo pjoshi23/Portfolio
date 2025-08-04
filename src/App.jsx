@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
@@ -14,7 +15,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'experience', 'projects', 'skills', 'contact']
+      const sections = ['home', 'experience', 'projects', 'skills', 'contact']
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -39,7 +40,6 @@ function App() {
     <div className="app">
       <nav className="navbar">
         <div className="nav-content">
-          <div className="nav-logo" onClick={() => scrollToSection('home')}>PJ</div>
           <div className="nav-links">
             <button onClick={() => scrollToSection('about')} className={activeSection === 'about' ? 'active' : ''}>About</button>
             <button onClick={() => scrollToSection('experience')} className={activeSection === 'experience' ? 'active' : ''}>Experience</button>
@@ -56,26 +56,26 @@ function App() {
           <div className="hero-content">
             <div className="hero-text">
               <h1>Hi, I'm Pranav!</h1>
-              <h2>and I like making things...</h2>
+              <h2>Building. Innovating. Making an Impact.</h2>
               <p className="hero-subtitle">Computer Science Student @ UCLA</p>
               <div className="hero-buttons">
-                <button onClick={() => scrollToSection('about')} className="btn-primary">Learn More</button>
+                <button onClick={() => scrollToSection('about')} className="btn-secondary">Learn More</button>
                 <button onClick={() => scrollToSection('projects')} className="btn-secondary">View Projects</button>
               </div>
             </div>
             <div className="hero-visual">
               <div className="floating-card">
                 <div className="card-icon">🤖</div>
-                <h3>AI/ML Enthusiast</h3>
+                <h3>AI/ML Engineer</h3>
               </div>
               <div className="floating-card">
                 <div className="card-icon">💻</div>
                 <h3>Full-Stack Developer</h3>
               </div>
-              <div className="floating-card">
+              {/* <div className="floating-card">
                 <div className="card-icon">🔬</div>
                 <h3>Research Assistant</h3>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -83,27 +83,31 @@ function App() {
         {/* About Section */}
         <section id="about" className="about-section">
           <div className="section-header">
-            <h2>About Me 😀</h2>
+            <h2>About Me</h2>
             <div className="social-links">
-              <a href="https://github.com/pjoshi23" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="https://linkedin.com/in/pranav-joshi-3a9a08194/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/pjoshi23" target="_blank" rel="noopener noreferrer">
+              <FaGithub size={24} />
+            </a>
+            <a href="https://linkedin.com/in/pranav-joshi-3a9a08194/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin size={24} />
+            </a>
             </div>
           </div>
           
           <div className="about-content">
             <div className="about-card">
-              <h3>Personal Life</h3>
-              <p>I am an enthusiastic and passionate person who loves to learn new things! I enjoy spending time with my friends and family, working on exciting projects, playing basketball, and exploring new technologies. I also volunteer as a tutor and love to meet new people!</p>
+              <h3>Professional Interests</h3>
+              <p>I'm studying Computer Science at UCLA, and have a passion for building impactful software products. I'm especially interested in AI/ML, computer vision, and full-stack development. I've built autonomous systems, mobile apps, and web platforms, and I enjoy finding elegant solutions to complex problems.</p>
             </div>
             
             <div className="about-card">
-              <h3>Professional Life</h3>
-              <p>I am a Computer Science Major at UCLA with a deep passion for computer programming, artificial intelligence, and software development. I have experience with full-stack development, AI/ML, data science, and research. I've worked on projects ranging from mobile apps to machine learning models.</p>
+              <h3>Activities</h3>
+              <p>At UCLA, I'm involved in several organizations like IEEE, Creative Labs, ACM AI, and DevX. I've built an autonomous mini racecar with IEEE, developed an AI-powered nutrition tracking app called Caloriq with Creative Labs, trained language models for Shakespeare-style text generation in ACM AI, and helped build a course planning platform tailored for UCLA students through DevX.</p>
             </div>
             
             <div className="about-card">
-              <h3>Goal</h3>
-              <p>My goal is to learn as much as possible and create impactful solutions that can make a difference in the world. I believe that continuous learning and innovation are the keys to solving complex problems.</p>
+              <h3>Hobbies</h3>
+              <p>Outside of coding, I love playing basketball and football, diving into a good book, and lately, I’ve been enjoying the challenge of learning tennis. I’m always curious and drawn to activities that push me—whether it’s on the court or through new perspectives in literature. That same curiosity fuels my approach to engineering: staying active, open-minded, and always learning something new.</p>
             </div>
           </div>
         </section>
@@ -113,20 +117,17 @@ function App() {
           <h2>Experience</h2>
           <div className="timeline">
             <div className="timeline-item">
-              <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <h3>Model Research Scientist Intern</h3>
                 <h4>AllyIn.ai</h4>
                 <p className="date">Jun. 2025 - Present</p>
                 <ul>
-                  <li>Built a modular multi-agent AI system using GPT-4o, Stable Diffusion, and CoquiTTS to generate multilingual, multimodal marketing content, optimized prompt pipelines for contextual grounding</li>
-                  <li>Implemented ML feedback loops with virality scoring (OpenAI embeddings), sentiment analysis (DistilBERT), and user clustering; evaluated Mixtral-MoE for persona conditioning and deployed A/B testing with FAISS</li>
-                </ul>
+                  <li>Built a RAG-based Q&A platform with semantic search, TTS, voice cloning using OpenRouter and ElevenLabs; increased engagement by 100% through multilingual, voice-enabled responses and interactive querying</li>
+                  <li>Built a modular multi-agent AI system using GPT-4o, Stable Diffusion, and CoquiTTS to generate multilingual, multimodal marketing content, optimized prompt pipelines for contextual grounding</li>                </ul>
               </div>
             </div>
             
             <div className="timeline-item">
-              <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <h3>Fullstack Developer</h3>
                 <h4>Creative Labs @ UCLA</h4>
@@ -139,7 +140,6 @@ function App() {
             </div>
             
             <div className="timeline-item">
-              <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <h3>AI/ML Developer</h3>
                 <h4>ACM @ UCLA</h4>
@@ -151,7 +151,6 @@ function App() {
             </div>
             
             <div className="timeline-item">
-              <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <h3>Undergraduate Research Assistant</h3>
                 <h4>UCLA Sensing and Robotics for Infrastructure Lab</h4>
@@ -164,7 +163,6 @@ function App() {
             </div>
             
             <div className="timeline-item">
-              <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <h3>Software Developer Intern</h3>
                 <h4>GrowingIQ</h4>
@@ -177,7 +175,6 @@ function App() {
             </div>
             
             <div className="timeline-item">
-              <div className="timeline-marker"></div>
               <div className="timeline-content">
                 <h3>Research Intern</h3>
                 <h4>UCSC Science Internship Program</h4>
@@ -188,7 +185,7 @@ function App() {
                 </ul>
               </div>
             </div>
-          </div>
+          </div>n
         </section>
 
         {/* Projects Section */}
@@ -197,48 +194,62 @@ function App() {
           <p className="section-subtitle">Here are a few of the projects I'm extremely proud of!</p>
           
           <div className="projects-grid">
+
             <div className="project-card">
               <div className="project-header">
-                <h3>LineWaiter</h3>
+                <h3>CalorIQ</h3>
                 <div className="project-links">
-                  <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                  <a href="https://github.com/pjoshi23/CalorIQ" target="_blank" rel="noopener noreferrer">GitHub</a>
+                  <a href="#" target="_blank" rel="noopener noreferrer">Demo</a>
                 </div>
               </div>
-              <p className="tech-stack">Python, Flask, React, MongoDB, Git</p>
-              <p>Developed a full-stack web application using ReactJS, Python Flask, MongoDB, and Git, where users post listings representing restaurant/takeout lines, and other users can accept and wait in line on their behalf.</p>
+              <p className="tech-stack">React Native, Firebase, Google Gemini Vision API</p>
+              <p>Built a modern nutrition tracking app with AI-powered food analysis using Google Gemini Vision API. Features include meal logging, progress tracking with animated rings, social feed for sharing meals, and user discovery with real-time updates.</p>
             </div>
             
             <div className="project-card">
               <div className="project-header">
                 <h3>RL-Autopilot</h3>
                 <div className="project-links">
-                  <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                  <a href="https://github.com/pjoshi23/rl_car_racing" target="_blank" rel="noopener noreferrer">GitHub</a>
                   <a href="#" target="_blank" rel="noopener noreferrer">Demo</a>
                 </div>
               </div>
               <p className="tech-stack">Python, PyTorch, OpenAI Gym, AWS</p>
               <p>Designed and trained a reinforcement learning agent to autonomously drive in the CarRacing-v0 environment, using deep Q-learning with convolutional neural networks to process high-dimensional image input.</p>
             </div>
-            
+
             <div className="project-card">
               <div className="project-header">
-                <h3>Caloriq</h3>
+                <h3>RAGSearch</h3>
                 <div className="project-links">
-                  <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">App Store</a>
+                  <a href="https://github.com/pjoshi23/LineWaiter" target="_blank" rel="noopener noreferrer">GitHub</a>
+                  <a href="#" target="_blank" rel="noopener noreferrer">Demo</a>
                 </div>
               </div>
-              <p className="tech-stack">React Native, Firebase, Google Gemini Vision API</p>
-              <p>Built a modern nutrition tracking app with AI-powered food analysis using Google Gemini Vision API. Features include meal logging, progress tracking with animated rings, social feed for sharing meals, and user discovery with real-time updates.</p>
+              <p className="tech-stack">Python, Flask, React, MongoDB, Git</p>
+              <p>Built a multi-modal search system leveraging LangChain agents to intelligently route natural language queries across DuckDB, Qdrant, and Neo4j retrievers, enabling context-aware Whisper responses</p>
             </div>
+
+            <div className="project-card">
+              <div className="project-header">
+                <h3>LineWaiter</h3>
+                <div className="project-links">
+                  <a href="https://github.com/pjoshi23/LineWaiter" target="_blank" rel="noopener noreferrer">GitHub</a>
+                  <a href="#" target="_blank" rel="noopener noreferrer">Demo</a>
+                </div>
+              </div>
+              <p className="tech-stack">Python, Flask, React, MongoDB, Git</p>
+              <p>Developed a full-stack web application using ReactJS, Python Flask, MongoDB, and Git, where users post listings representing restaurant/takeout lines, and other users can accept and wait in line on their behalf.</p>
+            </div>
+
           </div>
         </section>
 
         {/* Skills Section */}
         <section id="skills" className="skills-section">
           <h2>Skills</h2>
-          <p className="section-subtitle">I'm passionate about learning. As a result, I have accumulated a myriad of skills. Here are some of my most well-developed skills!</p>
+          <p className="section-subtitle">Here are some of my most well-developed skills!</p>
           
           <div className="skills-grid">
             <div className="skill-category">
@@ -249,12 +260,12 @@ function App() {
                 <span>TypeScript</span>
                 <span>C/C++</span>
                 <span>Swift</span>
+                <span>R</span>
                 <span>Java</span>
                 <span>SQL</span>
-                <span>HTML5</span>
+                <span>HTML</span>
                 <span>CSS</span>
                 <span>Matlab</span>
-                <span>R</span>
               </div>
             </div>
             
@@ -266,11 +277,11 @@ function App() {
                 <span>Node.js</span>
                 <span>Flask</span>
                 <span>PyTorch</span>
+                <span>MongoDB</span>
                 <span>TensorFlow</span>
                 <span>Pandas</span>
-                <span>Scikit-learn</span>
-                <span>MongoDB</span>
                 <span>Firebase</span>
+                <span>Scikit-learn</span>
               </div>
             </div>
             
@@ -293,14 +304,14 @@ function App() {
             <div className="skill-category">
               <h3>Areas of Expertise</h3>
               <div className="skill-tags">
-                <span>Full-Stack Development</span>
                 <span>Machine Learning</span>
+                <span>Full-Stack Development</span>
                 <span>Data Science</span>
                 <span>Mobile Development</span>
                 <span>API Development</span>
-                <span>Database Design</span>
+                <span>Databases</span>
                 <span>Cloud Computing</span>
-                <span>DevOps</span>
+                {/* <span>DevOps</span> */}
               </div>
             </div>
           </div>
@@ -346,7 +357,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="footer">
+      {/* <footer className="footer">
         <div className="footer-content">
           <p>Made with ❤️ by Pranav Joshi</p>
           <div className="footer-links">
@@ -356,7 +367,7 @@ function App() {
             <button onClick={() => scrollToSection('contact')}>Contact</button>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   )
 }
