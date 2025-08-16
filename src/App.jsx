@@ -98,7 +98,7 @@ function App() {
             <div className="hero-text">
               <h1>Hi, I'm Pranav!</h1>
               <h2>Building. Innovating. Making an Impact.</h2>
-              <p className="hero-subtitle">Computer Science Student @ UCLA</p>
+              <p className="hero-subtitle">Computer Science @ UCLA</p>
               <div className="hero-buttons">
                 <button onClick={() => scrollToSection('about')} className="btn-secondary">Learn More</button>
                 <button onClick={() => scrollToSection('projects')} className="btn-secondary">View Projects</button>
@@ -107,11 +107,15 @@ function App() {
             <div className="hero-visual">
               <div className="floating-card">
                 <div className="card-icon">🤖</div>
-                <h3>AI/ML Engineer</h3>
+                <h3>Machine Learning</h3>
+              </div>
+              <div className="floating-card">
+                <div className="card-icon">🧠</div>
+                <h3>Generative AI & Deep Learning</h3>
               </div>
               <div className="floating-card">
                 <div className="card-icon">💻</div>
-                <h3>Full-Stack Developer</h3>
+                <h3>Full-Stack Development</h3>
               </div>
               {/* <div className="floating-card">
                 <div className="card-icon">🔬</div>
@@ -162,7 +166,7 @@ function App() {
                 <h3>Model Research Scientist Intern</h3>
                 <h4>AllyIn.ai</h4>
                 <ul>
-                  <li>Built a RAG-based Q&A platform with semantic search, TTS, voice cloning using OpenRouter and ElevenLabs; increased engagement by 100% through multilingual, voice-enabled responses and interactive querying</li>
+                  <li>Built a RAG-based Enterprise Q&A system with semantic search, TTS, voice cloning using OpenRouter and ElevenLabs; increased engagement by 100% through multilingual, voice-enabled responses and interactive querying</li>
                   <li>Built a modular multi-agent AI system using GPT-4o, Stable Diffusion, and CoquiTTS to generate multilingual, multimodal marketing content, optimized prompt pipelines for contextual grounding</li>                </ul>
               </div>
             </div>

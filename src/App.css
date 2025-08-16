@@ -825,3 +825,80 @@ section h2 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Improved mobile styles */
+@media (max-width: 768px) {
+  .nav-links {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-links button {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .hero-text h2 {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    white-space: normal;
+  }
+
+  .hero-visual {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .floating-card {
+    width: 120px;
+    padding: 1rem;
+  }
+
+  .about-content,
+  .projects-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: auto;
+    max-height: 160px;
+    object-fit: contain;
+  }
+
+  section {
+    padding: 2.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+  }
+
+  .hero-text h2 {
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+
+  .contact-item a {
+    font-size: 2rem;
+  }
+}
