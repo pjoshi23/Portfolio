@@ -926,3 +926,15 @@ section h2 {
     line-height: 1.2;
   }
 }
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 6rem; /* pushes content down so navbar doesn't overlap */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding-top: 5rem; /* a bit less for very small screens */
+  }
+}
