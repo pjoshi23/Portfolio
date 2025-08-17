@@ -106,16 +106,16 @@ function App() {
             </div>
             <div className="hero-visual">
               <div className="floating-card">
-                <div className="card-icon">🤖</div>
-                <h3>Machine Learning</h3>
-              </div>
-              <div className="floating-card">
                 <div className="card-icon">🧠</div>
                 <h3>GenAI & Deep Learning</h3>
               </div>
               <div className="floating-card">
                 <div className="card-icon">💻</div>
                 <h3>Full-Stack Development</h3>
+              </div>
+              <div className="floating-card">
+                <div className="card-icon">🤖</div>
+                <h3>Machine Learning</h3>
               </div>
               {/* <div className="floating-card">
                 <div className="card-icon">🔬</div>
