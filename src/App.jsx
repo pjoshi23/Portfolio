@@ -96,8 +96,8 @@ function App() {
         <section id="home" className="hero-section">
           <div className="hero-content">
             <div className="hero-text">
-              <h1>Hi, I'm Pranav!</h1>
-              <h2>Building. Innovating. Making an Impact.</h2>
+              <h1 style={{ color: 'white' }}>Hi, I'm Pranav!</h1>
+              <h2 style={{ color: 'white' }}>Building. Innovating. Making an Impact.</h2>
               <p className="hero-subtitle">Computer Science @ UCLA</p>
               <div className="hero-buttons">
                 <button onClick={() => scrollToSection('about')} className="btn-secondary">Learn More</button>
@@ -128,7 +128,7 @@ function App() {
         {/* About Section */}
         <section id="about" className="about-section">
           <div className="section-header">
-            <h2>About Me</h2>
+            <h2 style={{ color: 'white' }}>About Me</h2>
             <div className="social-links">
             <a href="https://github.com/pjoshi23" target="_blank" rel="noopener noreferrer">
               <FaGithub size={30} />
@@ -147,7 +147,7 @@ function App() {
             
             <div className="about-card">
               <h3>Activities</h3>
-              <p>At UCLA, I'm involved in several organizations such as ACM AI, Creative Labs, IEEE. I've built an autonomous racecar in IEEE, developed an AI-powered different daily nutrition tracking app called CalorIQ at Creative Labs, and trained large language models for Shakespeare-style text generation in ACM AI.</p>
+              <p>At UCLA, I'm involved in several organizations such as ACM AI, Creative Labs, IEEE, and the SRI Lab. I've also built an autonomous racecar in IEEE, developed an AI-powered different daily nutrition tracking app called CalorIQ at Creative Labs, and trained large language models for Shakespeare-style text generation in ACM AI.</p>
             </div>
             
             <div className="about-card">
@@ -159,14 +159,14 @@ function App() {
 
         {/* Experience Section */}
         <section id="experience" className="experience-section">
-          <h2>Experience</h2>
+          <h2 style={{ color: 'white' }}>Experience</h2>
           <div className="timeline">
             <div className="timeline-item">
               <div className="timeline-content">
                 <h3>Model Research Scientist Intern</h3>
                 <h4>AllyIn.ai</h4>
                 <ul>
-                  <li>Built a RAG-based Enterprise Q&A system with semantic search, TTS, voice cloning using OpenRouter and ElevenLabs; increased engagement by 100% through multilingual, voice-enabled responses and interactive querying</li>
+                  <li>Built and presented a RAG-based Enterprise Q&A system to early-stage investors. Implemented semantic search, TTS, voice cloning using OpenRouter and ElevenLabs; increased engagement by 100% through multilingual, voice-enabled responses and interactive querying</li>
                   <li>Built a modular multi-agent AI system using GPT-4o, Stable Diffusion, and CoquiTTS to generate multilingual, multimodal marketing content, optimized prompt pipelines for contextual grounding</li>                </ul>
               </div>
             </div>
@@ -229,7 +229,7 @@ function App() {
 
         {/* Projects Section */}
         <section id="projects" className="projects-section">
-          <h2>Projects</h2>
+          <h2 style={{ color: 'white' }}>Projects</h2>
           <p className="section-subtitle">Here are a few of the projects I'm extremely proud of!</p>
           
           <div className="projects-grid">
@@ -314,7 +314,7 @@ function App() {
 
         {/* Skills Section */}
         <section id="skills" className="skills-section">
-          <h2>Skills</h2>
+          <h2 style={{ color: 'white' }}>Skills</h2>
           <p className="section-subtitle">Here are my well-developed technical skills!</p>
           
           <div className="skills-grid">
@@ -386,8 +386,6 @@ function App() {
                 <span>Artificial Intelligence</span>
                 <span>Full-Stack Development</span>
                 <span>Mobile App Development</span>
-                <span>Databases</span>
-                <span>API Development</span>
                 <span>Cloud Computing</span>
                 {/* <span>DevOps</span> */}
               </div>

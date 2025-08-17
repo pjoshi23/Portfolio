@@ -171,13 +171,14 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
   background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.1;
+  color: var(--text-color);
 }
 
 .hero-text h2 {
@@ -199,6 +200,16 @@ body {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.hero-text h1,
+.hero-subtitle,
+.about-section h2,
+.experience-section h2,
+.projects-section h2,
+.skills-section h2 {
+  color: white !important;
+  -webkit-text-fill-color: unset;
 }
 
 .btn-primary, .btn-secondary {
