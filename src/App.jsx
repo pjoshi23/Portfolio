@@ -147,7 +147,7 @@ function App() {
             
             <div className="about-card">
               <h3>Activities</h3>
-              <p>At UCLA, I'm involved in several organizations such as ACM AI, Creative Labs, IEEE, and the SRI Lab. I've also built an autonomous racecar in IEEE, developed an AI-powered different daily nutrition tracking app called CalorIQ at Creative Labs, and trained large language models for Shakespeare-style text generation in ACM AI.</p>
+              <p>At UCLA, I'm involved in several organizations such as ACM AI, Creative Labs, IEEE, and the SRI Lab. I've built an an AI-powered daily nutrition tracking mobile app, a RAG-based multi-modal search system, an RL-based agent for autonomous driving, and LLMs for text generation.</p>
             </div>
             
             <div className="about-card">
@@ -166,8 +166,9 @@ function App() {
                 <h3>Model Research Scientist Intern</h3>
                 <h4>AllyIn.ai</h4>
                 <ul>
-                  <li>Built and presented a RAG-based Enterprise Q&A system to early-stage investors. Implemented semantic search, TTS, voice cloning using OpenRouter and ElevenLabs; increased engagement by 100% through multilingual, voice-enabled responses and interactive querying</li>
-                  <li>Built a modular multi-agent AI system using GPT-4o, Stable Diffusion, and CoquiTTS to generate multilingual, multimodal marketing content, optimized prompt pipelines for contextual grounding</li>                </ul>
+                  <li>Led development and investor demo of a RAG-based Q&A system; integrated semantic search, TTS, and voice cloning with OpenRouter and ElevenLabs to increase engagement by 100% using voice-enabled responses</li>
+                  <li>Spearheaded design of a modular multi-agent AI system leveraging GPT-4o, Stable Diffusion, and CoquiTTS to produce multilingual, multimodal marketing content, streamlining prompt pipelines for contextual accuracy</li>
+                  </ul>
               </div>
             </div>
             
@@ -197,8 +198,8 @@ function App() {
                 <h3>Undergraduate Research Assistant</h3>
                 <h4>UCLA Sensing and Robotics for Infrastructure Lab</h4>
                 <ul>
-                  <li>Developed Python code to extract and preprocess data from LA City datasets, implemented random forest regression to assess risk level and importance of each street, and compute PCI index using distress information</li>
-                  <li>Automated data pipeline deployment on AWS cloud using ECS and S3, ensuring reliable, up-to-date data</li>
+                  <li>Built an AWS pipeline using ECS and S3 to automate weekly updates of LA city datasets, powering an application that enables data-informed infrastructure resilience and urban planning decisions for 1,200+ miles of LA streets.</li>
+                  <li>Performed data-driven risk assessments, and earned a Certificate of Appreciation from the LA City Council.</li>
                 </ul>
               </div>
             </div>
