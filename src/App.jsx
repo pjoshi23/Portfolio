@@ -157,7 +157,7 @@ function App() {
 
             <div className="about-card">
               <h3>Awards</h3>
-              <p>I was invited to attend Y Combinator's first-ever AI Startup School, where I got an opportunity to hear from the top AI founders and visionary leaders, including Sam Altman, Satya Nadella, Andrej Karpathy, and many others. I, along with the other members of the LA-Streets research project at UCLA's SRI Lab, also received a Certificate of Appreciation from the LA City Council.</p>
+              <p>I was invited to attend Y Combinator's first-ever AI Startup School, where I got an opportunity to hear from the top AI founders and visionary leaders, including Sam Altman, Satya Nadella, Andrej Karpathy, and many others. I also received a Certificate of Appreciation from the LA City Council along with other members of the LA-Streets research project at UCLA's SRI Lab.</p>
             </div>
           </div>
         </section>
