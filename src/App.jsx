@@ -168,7 +168,7 @@ function App() {
           <div className="timeline">
             <div className="timeline-item">
               <div className="timeline-content">
-                <h3>Model Research Scientist Intern</h3>
+                <h3>AI/ML Engineer Intern</h3>
                 <h4>AllyIn.ai</h4>
                 <ul>
                   <li>Led development and investor demo of a RAG-based Q&A system; integrated semantic search, TTS, and voice cloning with OpenRouter and ElevenLabs to increase engagement by 100% using voice-enabled responses</li>
