@@ -154,6 +154,11 @@ function App() {
               <h3>Hobbies</h3>
               <p>Outside of coding, I love playing basketball and football, and immersing myself in a good book. I'm always curious and drawn to activities that push me, whether it's on the court or through new perspectives in literature. That same curiosity fuels my approach to engineering: staying engaged, open-minded, and always learning something new.</p>
             </div>
+
+            <div className="about-card">
+              <h3>Awards</h3>
+              <p>I was invited to attend Y Combinator's first-ever AI Startup School, where I got an opportunity to hear from the top AI founders and visionary leaders, including Sam Altman, Satya Nadella, Andrej Karpathy, and many others. I, along with the other members of the LA-Streets research project at UCLA's SRI Lab, also received a Certificate of Appreciation from the LA City Council.</p>
+            </div>
           </div>
         </section>
 
