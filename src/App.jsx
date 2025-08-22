@@ -147,7 +147,7 @@ function App() {
             
             <div className="about-card">
               <h3>Activities</h3>
-              <p>At UCLA, I'm involved in several organizations such as ACM AI, Creative Labs, IEEE, and the SRI Lab. I've built an an AI-powered daily nutrition tracking mobile app, a RAG-based multi-modal search system, an RL-based agent for autonomous driving, and LLMs for text generation.</p>
+              <p>At UCLA, I'm involved in several organizations such as ACM AI, Creative Labs, IEEE, and the SRI Lab. I've built an AI-powered daily nutrition tracking mobile app, a RAG-based multi-modal search system, an RL-based agent for autonomous driving, and LLMs for text generation.</p>
             </div>
             
             <div className="about-card">
