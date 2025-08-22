@@ -142,7 +142,7 @@ function App() {
           <div className="about-content">
             <div className="about-card">
               <h3>Professional Interests</h3>
-              <p>I'm studying Computer Science at UCLA, and have a passion for building impactful software products. I'm especially interested in AI/ML, computer vision, and full-stack development. I've built autonomous systems, mobile apps, and web platforms, and I enjoy finding elegant solutions to challenging problems.</p>
+              <p>I'm studying Computer Science at UCLA, and have a passion for building impactful software products. I'm especially interested in generative AI, deep learning, machine learning, and full-stack software engineering. I've built agentic systems, AI models, mobile apps, and web platforms, and I enjoy finding elegant solutions to challenging problems.</p>
             </div>
             
             <div className="about-card">
@@ -211,7 +211,7 @@ function App() {
             
             <div className="timeline-item">
               <div className="timeline-content">
-                <h3>Software Developer Intern</h3>
+                <h3>Software Engineering Intern</h3>
                 <h4>GrowingIQ</h4>
                 <ul>
                   <li>Built a robust full-featured website for Growing IQ's free trial assessment using Velo API, and Javascript</li>
