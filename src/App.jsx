@@ -142,7 +142,7 @@ function App() {
           <div className="about-content">
             <div className="about-card">
               <h3>Professional Interests</h3>
-              <p>I'm studying Computer Science at UCLA, and have a passion for building impactful software products. I'm especially interested in generative AI, deep learning, machine learning, and full-stack software engineering. I enjoy transforming ideas into end-to-end solutions that push boundaries and deliver real-world impact.</p>
+              <p>I'm studying Computer Science at UCLA, and have a passion for building impactful software products. I'm especially interested in generative AI, agentic AI, deep learning, machine learning, and full-stack software engineering. I enjoy transforming ideas into end-to-end solutions that push boundaries and deliver real-world impact.</p>
             </div>
             
             <div className="about-card">
