@@ -111,7 +111,7 @@ function App() {
               </div>
               <div className="floating-card">
                 <div className="card-icon">🤖</div>
-                <h3>Machine Learning & Deep Learning</h3>
+                <h3>Machine Learning & DL</h3>
               </div>
               <div className="floating-card">
                 <div className="card-icon">💻</div>
