@@ -107,15 +107,15 @@ function App() {
             <div className="hero-visual">
               <div className="floating-card">
                 <div className="card-icon">🧠</div>
-                <h3>GenAI & Deep Learning</h3>
+                <h3>GenAI & Agentic AI</h3>
+              </div>
+              <div className="floating-card">
+                <div className="card-icon">🤖</div>
+                <h3>Machine Learning & Deep Learning</h3>
               </div>
               <div className="floating-card">
                 <div className="card-icon">💻</div>
                 <h3>Full-Stack Development</h3>
-              </div>
-              <div className="floating-card">
-                <div className="card-icon">🤖</div>
-                <h3>Machine Learning</h3>
               </div>
               {/* <div className="floating-card">
                 <div className="card-icon">🔬</div>
