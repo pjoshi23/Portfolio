@@ -774,7 +774,7 @@ section h2 {
 }
 
 /* Mobile Navigation */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .nav-links {
     position: absolute;
     top: 100%;
@@ -806,7 +806,7 @@ section h2 {
     padding: 1rem;
     font-size: 1rem;
   }
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 768px) {

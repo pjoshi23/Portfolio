@@ -93,16 +93,12 @@ function App() {
             <div className="hero-visual">
               <div className="floating-card">
                 <div className="card-icon">🤖</div>
-                <h3>Agentic AI</h3>
+                <h3>Generative AI and Agentic AI</h3>
               </div>
               <div className="floating-card">
                 <div className="card-icon">🧠</div>
-                <h3>Generative AI</h3>
-              </div>
-              {/* <div className="floating-card">
-                <div className="card-icon">📊</div>
                 <h3>Machine Learning</h3>
-              </div> */}
+              </div>
               <div className="floating-card">
                 <div className="card-icon">💻</div>
                 <h3>Full-Stack Development</h3>
