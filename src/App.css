@@ -774,39 +774,11 @@ section h2 {
 }
 
 /* Mobile Navigation */
-/* @media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: var(--surface-elevated);
-    border: 1px solid var(--border-subtle);
-    border-top: none;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 200px;
-    padding: 1rem;
-    gap: 0.5rem;
+@media (max-width: 768px) {
+  .navbar {
     display: none;
-    box-shadow: var(--shadow-lg);
-    backdrop-filter: blur(20px);
   }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links button {
-    width: 100%;
-    text-align: left;
-    padding: 1rem;
-    font-size: 1rem;
-  }
-} */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
