@@ -99,10 +99,10 @@ function App() {
                 <div className="card-icon">🧠</div>
                 <h3>Generative AI</h3>
               </div>
-              <div className="floating-card">
+              {/* <div className="floating-card">
                 <div className="card-icon">📊</div>
                 <h3>Machine Learning</h3>
-              </div>
+              </div> */}
               <div className="floating-card">
                 <div className="card-icon">💻</div>
                 <h3>Full-Stack Development</h3>
