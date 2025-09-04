@@ -139,7 +139,7 @@ function App() {
 
             <div className="about-card">
               <h3>Awards</h3>
-              <p>I attended Y Combinator's AI Startup School, hearing from leaders like Sam Altman, Satya Nadella, and Andrej Karpathy. I also received a Certificate of Appreciation from the LA City Council for my work on the LA-Streets research project.</p>
+              <p>I was invited to Y Combinator's AI Startup School, and was inspired by leaders like Sam Altman, Satya Nadella, and Andrej Karpathy. I also received a Certificate of Appreciation from the LA City Council for my work on the LA-Streets research project.</p>
             </div>
           </div>
         </section>
