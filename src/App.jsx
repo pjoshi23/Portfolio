@@ -8,30 +8,29 @@ import ragsearchImg from './assets/ragsearch.png'
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
-  const [menuOpen, setMenuOpen] = useState(false) // <-- new menu state
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
     setActiveSection(sectionId)
-    setMenuOpen(false) // close menu on link click
+    setMenuOpen(false)
   }
 
-  const toggleMenu = () => setMenuOpen(!menuOpen) // hamburger toggle
+  const toggleMenu = () => setMenuOpen(!menuOpen)
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'experience', 'projects', 'skills', 'contact']
-      const scrollPosition = window.scrollY + 100
+      const sections = ['home', 'about', 'experience', 'projects', 'skills', 'contact']
+      const scrollPosition = window.scrollY + 80 // adjust based on navbar height
 
       for (const section of sections) {
         const element = document.getElementById(section)
         if (element) {
           const offsetTop = element.offsetTop
           const offsetHeight = element.offsetHeight
-
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section)
             break
@@ -46,41 +45,27 @@ function App() {
 
   return (
     <div className="app">
+      {/* Navbar */}
       <nav className="navbar">
         <div className="nav-content">
-          <div className="nav-logo" onClick={() => scrollToSection('about')}>
+          <div className="nav-logo" onClick={() => scrollToSection('home')}>
             Pranav Joshi
           </div>
 
           <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
-            <button
-              onClick={() => scrollToSection('about')}
-              className={activeSection === 'about' ? 'active' : ''}
-            >
+            <button onClick={() => scrollToSection('about')} className={activeSection === 'about' ? 'active' : ''}>
               About
             </button>
-            <button
-              onClick={() => scrollToSection('experience')}
-              className={activeSection === 'experience' ? 'active' : ''}
-            >
+            <button onClick={() => scrollToSection('experience')} className={activeSection === 'experience' ? 'active' : ''}>
               Experience
             </button>
-            <button
-              onClick={() => scrollToSection('projects')}
-              className={activeSection === 'projects' ? 'active' : ''}
-            >
+            <button onClick={() => scrollToSection('projects')} className={activeSection === 'projects' ? 'active' : ''}>
               Projects
             </button>
-            <button
-              onClick={() => scrollToSection('skills')}
-              className={activeSection === 'skills' ? 'active' : ''}
-            >
+            <button onClick={() => scrollToSection('skills')} className={activeSection === 'skills' ? 'active' : ''}>
               Skills
             </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className={activeSection === 'contact' ? 'active' : ''}
-            >
+            <button onClick={() => scrollToSection('contact')} className={activeSection === 'contact' ? 'active' : ''}>
               Contact
             </button>
           </div>
@@ -91,14 +76,15 @@ function App() {
         </div>
       </nav>
 
+      {/* Main Content */}
       <main className="main-content">
         {/* Hero Section */}
         <section id="home" className="hero-section">
           <div className="hero-content">
             <div className="hero-text">
-              <h1 style={{ color: 'white' }}>Hi, I'm Pranav!</h1>
-              <h2 style={{ color: 'white' }}>Building. Innovating. Making an Impact.</h2>
-              <p className="hero-subtitle">Computer Science @ UCLA</p>
+              <h1>Hi, I'm Pranav!</h1>
+              <h2>Building. Innovating. Making an Impact.</h2>
+              <p className="hero-subtitle">B.S. in Computer Science @ UCLA</p>
               <div className="hero-buttons">
                 <button onClick={() => scrollToSection('about')} className="btn-secondary">Learn More</button>
                 <button onClick={() => scrollToSection('projects')} className="btn-secondary">View Projects</button>
@@ -106,21 +92,21 @@ function App() {
             </div>
             <div className="hero-visual">
               <div className="floating-card">
-                <div className="card-icon">🧠</div>
-                <h3>GenAI & Agentic AI</h3>
+                <div className="card-icon">🤖</div>
+                <h3>Agentic AI</h3>
               </div>
               <div className="floating-card">
-                <div className="card-icon">🤖</div>
-                <h3>Machine Learning & DL</h3>
+                <div className="card-icon">🧠</div>
+                <h3>Generative AI</h3>
+              </div>
+              <div className="floating-card">
+                <div className="card-icon">📊</div>
+                <h3>Machine Learning</h3>
               </div>
               <div className="floating-card">
                 <div className="card-icon">💻</div>
                 <h3>Full-Stack Development</h3>
               </div>
-              {/* <div className="floating-card">
-                <div className="card-icon">🔬</div>
-                <h3>Research Assistant</h3>
-              </div> */}
             </div>
           </div>
         </section>
@@ -128,105 +114,106 @@ function App() {
         {/* About Section */}
         <section id="about" className="about-section">
           <div className="section-header">
-            <h2 style={{ color: 'white' }}>About Me</h2>
+            <h2>About Me</h2>
             <div className="social-links">
-            <a href="https://github.com/pjoshi23" target="_blank" rel="noopener noreferrer">
-              <FaGithub size={30} />
-            </a>
-            <a href="https://linkedin.com/in/pranav-joshi-3a9a08194/" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={30} />
-            </a>
+              <a href="https://github.com/pjoshi23" target="_blank" rel="noopener noreferrer">
+                <FaGithub size={30} />
+              </a>
+              <a href="https://linkedin.com/in/pranav-joshi-3a9a08194/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={30} />
+              </a>
             </div>
           </div>
-          
+
           <div className="about-content">
             <div className="about-card">
               <h3>Professional Interests</h3>
-              <p>I'm studying Computer Science at UCLA, and have a passion for building impactful software products. I'm especially interested in generative AI, agentic AI, deep learning, machine learning, and full-stack software engineering. I enjoy transforming ideas into end-to-end solutions that push boundaries and deliver real-world impact.</p>
+              <p>I'm studying Computer Science at UCLA, and have a passion for building impactful software products. I'm especially interested in generative AI, agentic AI, deep learning, machine learning, and full-stack software engineering.</p>
             </div>
-            
+
             <div className="about-card">
               <h3>Activities</h3>
-              <p>At UCLA, I'm involved in several organizations such as ACM AI, Creative Labs, IEEE, and the SRI Lab. I've built an AI-powered daily nutrition tracking mobile app, a RAG-based multi-modal search system, an RL-based agent for autonomous driving, and LLMs for text generation.</p>
+              <p>At UCLA, I'm involved in ACM AI, Creative Labs, IEEE, and the SRI Lab. I've built an AI-powered nutrition tracking app, a RAG-based search system, an RL agent for autonomous driving, and LLMs for text generation.</p>
             </div>
-            
+
             <div className="about-card">
               <h3>Hobbies</h3>
-              <p>Outside of coding, I love playing basketball and football, and immersing myself in a good book. I'm always curious and drawn to activities that push me, whether it's on the court or through new perspectives in literature. That same curiosity fuels my approach to engineering: staying engaged, open-minded, and always learning something new.</p>
+              <p>Outside of coding, I love basketball, football, and reading. That same curiosity fuels my approach to engineering: staying engaged, open-minded, and always learning something new.</p>
             </div>
 
             <div className="about-card">
               <h3>Awards</h3>
-              <p>I was invited to attend Y Combinator's first-ever AI Startup School, where I got an opportunity to hear from the top AI founders and visionary leaders, including Sam Altman, Satya Nadella, Andrej Karpathy, and many others. I also received a Certificate of Appreciation from the LA City Council along with other members of the LA-Streets research project at UCLA's SRI Lab.</p>
+              <p>I attended Y Combinator's AI Startup School, hearing from leaders like Sam Altman, Satya Nadella, and Andrej Karpathy. I also received a Certificate of Appreciation from the LA City Council for my work on the LA-Streets research project.</p>
             </div>
           </div>
         </section>
 
         {/* Experience Section */}
         <section id="experience" className="experience-section">
-          <h2 style={{ color: 'white' }}>Experience</h2>
+          <h2>Experience</h2>
           <div className="timeline">
+            {/* AllyIn */}
             <div className="timeline-item">
               <div className="timeline-content">
                 <h3>AI/ML Engineer Intern</h3>
                 <h4>AllyIn.ai</h4>
                 <ul>
-                  <li>Led development and investor demo of a RAG-based Q&A system; integrated semantic search, TTS, and voice cloning with OpenRouter and ElevenLabs to increase engagement by 100% using voice-enabled responses</li>
-                  <li>Spearheaded design of a modular multi-agent AI system leveraging GPT-4o, Stable Diffusion, and CoquiTTS to produce multilingual, multimodal marketing content, streamlining prompt pipelines for contextual accuracy</li>
-                  </ul>
+                  <li>Led development and investor demo of a RAG-based Enterprise Q&A system; integrated semantic search, TTS, and voice cloning with OpenRouter and ElevenLabs; increased engagement by 2x using voice-enabled responses.</li>
+                  <li>Applied engineering principles to design a modular multi-agent AI system leveraging GPT-4o, Stable Diffusion, and CoquiTTS to produce multilingual, multimodal, and contextually accurate marketing content.</li>
+                </ul>
               </div>
             </div>
-            
+            {/* Creative Labs */}
             <div className="timeline-item">
               <div className="timeline-content">
                 <h3>Fullstack Developer</h3>
                 <h4>Creative Labs @ UCLA</h4>
                 <ul>
-                  <li>Developed and optimized an AI-powered iOS application using React Native, Gemini Flash, and Firebase to analyze meal pictures and provide accurate nutritional information; engineered daily diet-tracking feature</li>
-                  <li>Implemented robust authentication using Firebase Authentication, real-time data processing with Firestore Listeners, deployed app on Firebase Hosting, ensuring scalability and low-latency user experience</li>
+                  <li>Developed and optimized an AI-powered goal-driven daily diet-tracking iOS application using React Native, Gemini Flash, and Firebase to analyze meal pictures and provide accurate nutritional information.</li>
+                  <li>Implemented robust authentication with Firebase Authentication, and real-time data updates via Firestore Listeners, achieving low-latency performance; supported 150+ active users, and increased user retention by 60%.</li>
                 </ul>
               </div>
             </div>
-            
+            {/* ACM */}
             <div className="timeline-item">
               <div className="timeline-content">
                 <h3>AI/ML Developer</h3>
                 <h4>ACM @ UCLA</h4>
                 <ul>
-                  <li>Developed 2 LLMs from scratch, an RNN and a GPT, for text generation using Tensorflow and BPE, demonstrated principles of transformer architecture and language modeling on Shakespeare's works</li>
+                  <li>Developed 2 LLMs from scratch, an RNN and a GPT, for text generation using Tensorflow and BPE, demonstrated principles of transformer architecture and language modeling on Shakespeare's works.</li>
                 </ul>
               </div>
             </div>
-            
+            {/* SRI Lab */}
             <div className="timeline-item">
               <div className="timeline-content">
                 <h3>Undergraduate Research Assistant</h3>
                 <h4>UCLA Sensing and Robotics for Infrastructure Lab</h4>
                 <ul>
-                  <li>Built an AWS pipeline using ECS and S3 to automate weekly updates of LA city datasets, powering an application that enables data-informed infrastructure resilience and urban planning decisions for 1,200+ miles of LA streets.</li>
+                  <li>Built an AWS pipeline using ECS and S3 to automate weekly updates of LA city datasets, powering an application that enables data-informed infrastructure resilience and urban planning decisions for 1200+ miles of LA streets.</li>
                   <li>Performed data-driven risk assessments, and earned a Certificate of Appreciation from the LA City Council.</li>
                 </ul>
               </div>
             </div>
-            
+            {/* GrowingIQ */}
             <div className="timeline-item">
               <div className="timeline-content">
                 <h3>Software Engineering Intern</h3>
-                <h4>GrowingIQ</h4>
+                <h4>Growing IQ</h4>
                 <ul>
-                  <li>Built a robust full-featured website for Growing IQ's free trial assessment using Velo API, and Javascript</li>
-                  <li>Architected database to store student data, teacher accounts using Google sign-in, and integrated website with Sendgrid REST APIs to trigger delivery of rich, personalized HTML emails summarizing child's progress</li>
+                  <li>Built a robust full-featured website for Growing IQ’s free trial assessment using Velo API, and Javascript.</li>
+                  <li>Architected database to store student data, teacher accounts using Google sign-in, and integrated website with Sendgrid REST APIs to send personalized HTML emails; reducing manual teacher onboarding time by 80%.</li>
                 </ul>
               </div>
             </div>
-            
+            {/* UCSC */}
             <div className="timeline-item">
               <div className="timeline-content">
                 <h3>Research Intern</h3>
                 <h4>UCSC Science Internship Program</h4>
                 <ul>
-                  <li>Built a YOLO-based object detection pipeline in PyTorch for an autonomous drone that interprets natural language commands and navigates toward identified targets; achieved 95% accuracy in diverse environments</li>
-                  <li>Used Python, Numpy, and Pandas alongside statistical methods to analyze large-scale communication datasets, applying advanced ML/NLP techniques to model and quantify emotional patterns across different mediums</li>
+                  <li>Developed a YOLOv3-based object detection pipeline in PyTorch for autonomous drone navigation with 95% accuracy.</li>
+                  <li>Analyzed communication datasets using Python, Numpy, Pandas, and ML/NLP to model emotional connection across mediums.</li>
                 </ul>
               </div>
             </div>
@@ -235,93 +222,69 @@ function App() {
 
         {/* Projects Section */}
         <section id="projects" className="projects-section">
-          <h2 style={{ color: 'white' }}>Projects</h2>
-          <p className="section-subtitle">Here are a few of the projects I'm extremely proud of!</p>
+          <h2>Projects</h2>
+          <p className="section-subtitle">Here are a few projects I'm proud of!</p>
           
           <div className="projects-grid">
-
+            {/* CalorIQ */}
             <div className="project-card">
               <div className="project-header">
                 <h3>CalorIQ</h3>
                 <div className="project-links">
-                <a href="https://github.com/pjoshi23/CalorIQ" target="_blank" rel="noopener noreferrer">
-              <FaGithub size={30} />
-            </a>
+                  <a href="https://github.com/pjoshi23/CalorIQ" target="_blank" rel="noopener noreferrer">
+                    <FaGithub size={30} />
+                  </a>
+                </div>
+              </div>
+              <img src={calorIQImg} alt="CalorIQ Screenshot" className="project-image"/>
+              <p>Nutrition tracking app with AI-powered food analysis (Gemini Vision API). Features meal logging, animated progress rings, social feed, and user discovery with real-time updates.</p>
             </div>
-              </div>
-              <img 
-                src={calorIQImg} 
-                alt="CalorIQ Screenshot" 
-                className="project-image"
-              />
-              {/* <p className="tech-stack">React Native, Firebase, Google Gemini Vision API</p> */}
-              <br></br>
-              <p>Built a modern nutrition tracking app with AI-powered food analysis using Google Gemini Vision API. Features include meal logging, progress tracking with animated rings, social feed for sharing meals, and user discovery with real-time updates.</p>
-              </div>
-            
+            {/* RL Autopilot */}
             <div className="project-card">
               <div className="project-header">
                 <h3>RL-Autopilot</h3>
                 <div className="project-links">
                   <a href="https://github.com/pjoshi23/rl_car_racing" target="_blank" rel="noopener noreferrer">
                     <FaGithub size={30} />
-            </a>
+                  </a>
                 </div>
               </div>
-              <img 
-                src={rlCarImg} 
-                alt="RL-Autopilot Screenshot" 
-                className="project-image"
-              />
-              {/* <p className="tech-stack">Python, PyTorch, OpenAI Gym, AWS</p> */}
-              <br></br>
-              <p>Designed and trained a reinforcement learning agent to autonomously drive in the CarRacing-v0 environment, using deep Q-learning with convolutional neural networks to process high-dimensional image input.</p>
+              <img src={rlCarImg} alt="RL-Autopilot Screenshot" className="project-image"/>
+              <p>Reinforcement learning agent trained in CarRacing-v0 using Deep Q-Learning and CNNs to process high-dimensional image input.</p>
             </div>
-
+            {/* RAGSearch */}
             <div className="project-card">
               <div className="project-header">
                 <h3>RAGSearch</h3>
                 <div className="project-links">
-                <a href="https://github.com/pjoshi23/rag-search" target="_blank" rel="noopener noreferrer">
-              <FaGithub size={30} />
-            </a>
+                  <a href="https://github.com/pjoshi23/rag-search" target="_blank" rel="noopener noreferrer">
+                    <FaGithub size={30} />
+                  </a>
                 </div>
               </div>
-              <img 
-                src={ragsearchImg} 
-                alt="RAG Search Image" 
-                className="project-image"
-              />
-              {/* <p className="tech-stack">Python, Flask, React, MongoDB, Git</p> */}
-              <br></br>
-              <p>Built a multi-modal search system leveraging LangChain agents to intelligently route natural language queries across DuckDB, Qdrant, and Neo4j retrievers, enabling context-aware Whisper responses</p>
+              <img src={ragsearchImg} alt="RAG Search Screenshot" className="project-image"/>
+              <p>Multi-modal search system using LangChain agents to route queries across DuckDB, Qdrant, and Neo4j retrievers, producing context-aware Whisper responses.</p>
             </div>
-
+            {/* LineWaiter */}
             <div className="project-card">
               <div className="project-header">
                 <h3>LineWaiter</h3>
                 <div className="project-links">
-                <a href="https://github.com/pjoshi23/LineWaiter" target="_blank" rel="noopener noreferrer">
-              <FaGithub size={30} />
-            </a>
+                  <a href="https://github.com/pjoshi23/LineWaiter" target="_blank" rel="noopener noreferrer">
+                    <FaGithub size={30} />
+                  </a>
                 </div>
               </div>
-              <img 
-                src={linewaiterImg} 
-                alt="LineWaiter Screenshot" 
-                className="project-image"
-              />
-              <br></br>
-              <p>Developed a full-stack web application using ReactJS, Python Flask, MongoDB, and Git, where users post listings representing restaurant/takeout lines, and other users can accept and wait in line on their behalf.</p>
+              <img src={linewaiterImg} alt="LineWaiter Screenshot" className="project-image"/>
+              <p>Full-stack web app where users post restaurant line listings, and others can accept/wait in line on their behalf. Built with ReactJS, Flask, MongoDB, and Git.</p>
             </div>
-
           </div>
         </section>
 
         {/* Skills Section */}
         <section id="skills" className="skills-section">
-          <h2 style={{ color: 'white' }}>Skills</h2>
-          <p className="section-subtitle">Here are my well-developed technical skills!</p>
+          <h2>Skills</h2>
+          <p className="section-subtitle">These are my strongest technical skills</p>
           
           <div className="skills-grid">
             <div className="skill-category">
@@ -332,6 +295,7 @@ function App() {
                 <span>Swift</span>
                 <span>SQL</span>
                 <span>HTML5</span>
+                <span>JSON</span>
                 <span>CSS</span>
                 <span>Java</span>
                 <span>JavaScript</span>
@@ -340,7 +304,6 @@ function App() {
                 <span>R</span>
               </div>
             </div>
-            
             <div className="skill-category">
               <h3>Frameworks & Libraries</h3>
               <div className="skill-tags">
@@ -354,6 +317,7 @@ function App() {
                 <span>LangChain</span>
                 <span>Pandas</span>
                 <span>Scikit-learn</span>
+                <span>REST APIs</span>
                 <span>Matplotlib</span>
                 <span>Firebase</span>
                 <span>Seaborn</span>
@@ -364,7 +328,6 @@ function App() {
                 <span>Keras</span>
               </div>
             </div>
-            
             <div className="skill-category">
               <h3>Developer Tools</h3>
               <div className="skill-tags">
@@ -384,7 +347,6 @@ function App() {
                 <span>IntelliJ</span>
               </div>
             </div>
-            
             <div className="skill-category">
               <h3>Areas of Expertise</h3>
               <div className="skill-tags">
@@ -393,56 +355,40 @@ function App() {
                 <span>Full-Stack Development</span>
                 <span>Mobile App Development</span>
                 <span>Cloud Computing</span>
-                {/* <span>DevOps</span> */}
               </div>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-          <section id="contact" className="contact-section">
-     <h2>Contact Me</h2>
-
-    <div className="contact-content">
-      <div className="contact-item">
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            const user = "pjoshi23";
-            const domain = "ucla.edu";
-            window.location.href = `mailto:${user}@${domain}`;
-          }}
-        >
-          <FaEnvelope size={40} />
-        </a>
-      </div>
-
-      <div className="contact-item">
-        <a
-          href="https://linkedin.com/in/pranav-joshi-3a9a08194/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin size={40} />
-        </a>
-      </div>
-    </div>
-  </section>
-
-      </main>
-
-      {/* <footer className="footer">
-        <div className="footer-content">
-          <p>Made with ❤️ by Pranav Joshi</p>
-          <div className="footer-links">
-            <button onClick={() => scrollToSection('about')}>About</button>
-            <button onClick={() => scrollToSection('projects')}>Projects</button>
-            <button onClick={() => scrollToSection('skills')}>Skills</button>
-            <button onClick={() => scrollToSection('contact')}>Contact</button>
+        <section id="contact" className="contact-section">
+          <h2>Contact Me</h2>
+          <div className="contact-content">
+            <div className="contact-item">
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const user = "pjoshi23";
+                  const domain = "ucla.edu";
+                  window.location.href = `mailto:${user}@${domain}`;
+                }}
+              >
+                <FaEnvelope size={40} />
+              </a>
+            </div>
+            <div className="contact-item">
+              <a
+                href="https://linkedin.com/in/pranav-joshi-3a9a08194/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin size={40} />
+              </a>
+            </div>
           </div>
-        </div>
-      </footer> */}
+        </section>
+      </main>
     </div>
   )
 }
