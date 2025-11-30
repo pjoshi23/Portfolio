@@ -176,7 +176,7 @@ function App() {
                 <h3>AI/ML Developer</h3>
                 <h4>ACM @ UCLA</h4>
                 <ul>
-                  <li>Developed 2 LLMs from scratch, an RNN and a GPT, for text generation using Tensorflow and BPE, demonstrated principles of transformer architecture and language modeling on Shakespeare's works.</li>
+                  <li>Built a 124M parameter transformer in PyTorch implementing DistributedDataParallel, mixed precision, and Flash Attention to achieve 300% throughput on 10B FineWeb-Edu tokens. Engineered a sharded multiprocessing data pipeline and custom HellaSwag evaluation harness to validate convergence.</li>
                 </ul>
               </div>
             </div>
@@ -220,7 +220,7 @@ function App() {
         <section id="projects" className="projects-section">
           <h2>Projects</h2>
           <p className="section-subtitle">Here are a few projects I'm proud of!</p>
-          
+
           <div className="projects-grid">
             {/* CalorIQ */}
             <div className="project-card">
@@ -232,7 +232,7 @@ function App() {
                   </a>
                 </div>
               </div>
-              <img src={calorIQImg} alt="CalorIQ Screenshot" className="project-image"/>
+              <img src={calorIQImg} alt="CalorIQ Screenshot" className="project-image" />
               <p>Nutrition tracking app with AI-powered food analysis (Gemini Vision API). Features meal logging, animated progress rings, social feed, and user discovery with real-time updates.</p>
             </div>
             {/* RL Autopilot */}
@@ -245,7 +245,7 @@ function App() {
                   </a>
                 </div>
               </div>
-              <img src={rlCarImg} alt="RL-Autopilot Screenshot" className="project-image"/>
+              <img src={rlCarImg} alt="RL-Autopilot Screenshot" className="project-image" />
               <p>Reinforcement learning agent trained in CarRacing-v0 using Deep Q-Learning and CNNs to process high-dimensional image input.</p>
             </div>
             {/* RAGSearch */}
@@ -258,7 +258,7 @@ function App() {
                   </a>
                 </div>
               </div>
-              <img src={ragsearchImg} alt="RAG Search Screenshot" className="project-image"/>
+              <img src={ragsearchImg} alt="RAG Search Screenshot" className="project-image" />
               <p>Multi-modal search system using LangChain agents to route queries across DuckDB, Qdrant, and Neo4j retrievers, producing context-aware Whisper responses.</p>
             </div>
             {/* LineWaiter */}
@@ -271,7 +271,7 @@ function App() {
                   </a>
                 </div>
               </div>
-              <img src={linewaiterImg} alt="LineWaiter Screenshot" className="project-image"/>
+              <img src={linewaiterImg} alt="LineWaiter Screenshot" className="project-image" />
               <p>Full-stack web app where users post restaurant line listings, and others can accept/wait in line on their behalf. Built with ReactJS, Flask, MongoDB, and Git.</p>
             </div>
           </div>
@@ -281,7 +281,7 @@ function App() {
         <section id="skills" className="skills-section">
           <h2>Skills</h2>
           <p className="section-subtitle">These are my strongest technical skills</p>
-          
+
           <div className="skills-grid">
             <div className="skill-category">
               <h3>Programming Languages</h3>
