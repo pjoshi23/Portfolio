@@ -176,7 +176,8 @@ function App() {
                 <h3>AI/ML Developer</h3>
                 <h4>ACM @ UCLA</h4>
                 <ul>
-                  <li>Built a 124M parameter transformer in PyTorch implementing DistributedDataParallel, mixed precision, and Flash Attention to achieve 300% throughput on 10B FineWeb-Edu tokens. Engineered a sharded multiprocessing data pipeline and custom HellaSwag evaluation harness to validate convergence.</li>
+                  <li>Built a 124M parameter transformer in PyTorch implementing DistributedDataParallel, mixed precision, and Flash Attention to achieve 300% throughput on 10B FineWeb-Edu tokens.</li>
+                  <li>Engineered a sharded multiprocessing data pipeline and custom HellaSwag evaluation harness to validate convergence.</li>
                 </ul>
               </div>
             </div>
